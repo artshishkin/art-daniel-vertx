@@ -10,4 +10,11 @@ public class VerticleA2 extends AbstractVerticle {
     System.out.println("Start " + getClass().getName());
     startPromise.complete();
   }
+
+  @Override
+  public void stop(Promise<Void> stopPromise) throws Exception {
+    System.out.println("Stop " + this.getClass().getName());
+    stopPromise.complete();
+  }
+
 }
